@@ -802,20 +802,6 @@ test3 = 1
 },25)
 
 
-var test4 = 0 
-var num4 = 0
-
-setInterval(function(){
-if(test4 == 0){
-console.log(num4)
-num4 += 1
-setTimeout(function(){
-test4 = 1 
-},1000)
-
-}
-
-},25)
 
 
 
