@@ -765,7 +765,7 @@ var num = 0
      	num+= 1
      	console.log(num)
 
-     }},10);
+     }},20);
 
 timeout1=window.rtimeOut(function(){
 test = 1 
