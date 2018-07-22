@@ -46,7 +46,7 @@ var platSpeed8 = 1.75;
 window.rInterval=function(a,b){var c=Date.now,d=window.requestAnimationFrame,e=c(),f,g=function(){c()-e<b||(e+=b,a());f||d(g)};d(g);return{clear:function(){f=1}}};
 window.rtimeOut=function(a,b){var c=Date.now,d=window.requestAnimationFrame,e=c(),f,g=function(){c()-e<b?f||d(g):a()};d(g);return{clear:function(){f=1}}};
 
-    var movement,timeout1;
+    var movement,timeout1, movement1, movement2;
 
     
 
@@ -758,12 +758,26 @@ ctx.fillStyle ='rgba(0,0,0,1)';
 
 var test = 0
 var num = 0 
+var num1 = 0 
+var num2= 0 
 
 
       window.onload=function(){
      movement=window.rInterval(function(){if(test == 0){
      	num+= 1
      	console.log(num)
+
+     }},20);
+           window.onload=function(){
+     movement1=window.rInterval(function(){if(test == 0){
+     	num1+= 1
+     	console.log(num1)
+
+     }},20);
+           window.onload=function(){
+     movement2=window.rInterval(function(){if(test == 0){
+     	num2+= 1
+     	console.log(num2)
 
      }},20);
 
