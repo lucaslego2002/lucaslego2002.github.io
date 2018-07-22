@@ -43,6 +43,15 @@ var platSpeed7 = 1.75;
 var platSpeed8 = 1.75;
 
 
+window.rInterval=function(a,b){var c=Date.now,d=window.requestAnimationFrame,e=c(),f,g=function(){c()-e<b||(e+=b,a());f||d(g)};d(g);return{clear:function(){f=1}}};
+window.rtimeOut=function(a,b){var c=Date.now,d=window.requestAnimationFrame,e=c(),f,g=function(){c()-e<b?f||d(g):a()};d(g);return{clear:function(){f=1}}};
+
+    var movement,timeout1;
+
+    
+
+
+
 //key event function
 document.onkeydown = function(evt) {
     evt = evt || window.event;
@@ -701,6 +710,19 @@ platSpeed8 = 0.5/slowmo;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 //timer
 var time = 0
 setInterval(function(){
@@ -733,75 +755,24 @@ ctx.fillStyle ='rgba(0,0,0,1)';
 	ctx.fillText("level:" + level  ,510,1580);
 },10)
 
-	
 
-//Created by Lucas Marrie
-//a product of Firebals LTD
+var test = 0
+var num = 0 
 
 
-var test = 0 
-var num = 0
+      window.onload=function(){
+     movement=window.rInterval(function(){if(test == 0){
+     	num+= 1
+     	console.log(num)
 
-setInterval(function(){
-if(test == 0){
-console.log(num)
-num += 1
-setTimeout(function(){
+     }},10);
+
+timeout1=window.rtimeOut(function(){
 test = 1 
-},1000)
-
-}
-
-},10)
+     },1000);
 
 
-var test1 = 0 
-var num1 = 0
-
-setInterval(function(){
-if(test1 == 0){
-console.log(num1)
-num1 += 1
-setTimeout(function(){
-test1 = 1 
-},1000)
-
-}
-
-},10)
-
-var test2 = 0 
-var num2 = 0
-
-setInterval(function(){
-if(test2 == 0){
-console.log(num2)
-num2 += 1
-setTimeout(function(){
-test2 = 1 
-},1000)
-
-}
-
-},10)
-
-
-var test3 = 0 
-var num3 = 0
-
-setInterval(function(){
-if(test3 == 0){
-console.log(num3)
-num3 += 1
-setTimeout(function(){
-test3 = 1 
-},1000)
-
-}
-
-},10)
-
-
+    }
 
 
 
