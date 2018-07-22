@@ -733,7 +733,7 @@ ctx.fillStyle ='rgba(0,0,0,1)';
 	ctx.fillText("level:" + level  ,510,1580);
 },4)
 
-
+	
 
 //Created by Lucas Marrie
 //a product of Firebals LTD
@@ -752,7 +752,70 @@ test = 1
 
 }
 
-},8)
+},20)
+
+
+var test1 = 0 
+var num1 = 0
+
+setInterval(function(){
+if(test1 == 0){
+console.log(num1)
+num1 += 1
+setTimeout(function(){
+test1 = 1 
+},1000)
+
+}
+
+},20)
+
+var test2 = 0 
+var num2 = 0
+
+setInterval(function(){
+if(test2 == 0){
+console.log(num2)
+num2 += 1
+setTimeout(function(){
+test2 = 1 
+},1000)
+
+}
+
+},20)
+
+
+var test3 = 0 
+var num3 = 0
+
+setInterval(function(){
+if(test3 == 0){
+console.log(num3)
+num3 += 1
+setTimeout(function(){
+test3 = 1 
+},1000)
+
+}
+
+},20)
+
+
+var test4 = 0 
+var num4 = 0
+
+setInterval(function(){
+if(test4 == 0){
+console.log(num4)
+num4 += 1
+setTimeout(function(){
+test4 = 1 
+},1000)
+
+}
+
+},20)
 
 
 
