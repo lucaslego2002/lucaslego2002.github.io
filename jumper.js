@@ -6,6 +6,8 @@ var ctx = c.getContext('2d');
 alert('This game is still in developments, there will be various bugs, this game is best adapted to google chrome browser')
 alert('controls: A = move left, D = move right, Space = Jump')
 
+
+
 //player
 var pw = 30;
 var ph = 30;
@@ -20,10 +22,10 @@ var jumpTime = 0;
 var jumpOrder = 0;
 
 //movement scalars 
-var jumpH = 5.75;
-var Pspeed = 1.75;
-var grav = 3;
-var jumpAllocation = 80;
+var jumpH = 16;
+var Pspeed = 7;
+var grav = 6;
+var jumpAllocation = 22;
 
 //motion speed
 var slowmo = 3;
@@ -43,12 +45,14 @@ var platSpeed7 = 1.75;
 var platSpeed8 = 1.75;
 
 
+
 window.rInterval=function(a,b){var c=Date.now,d=window.requestAnimationFrame,e=c(),f,g=function(){c()-e<b||(e+=b,a());f||d(g)};d(g);return{clear:function(){f=1}}};
 window.rtimeOut=function(a,b){var c=Date.now,d=window.requestAnimationFrame,e=c(),f,g=function(){c()-e<b?f||d(g):a()};d(g);return{clear:function(){f=1}}};
 
-    var movement,timeout1, movement1, movement2;
+    var movement, collision1, collision2, draw;
 
     
+
 
 
 
@@ -164,7 +168,10 @@ jumpOrder = 0
 }
 
 
-setInterval(function(){
+
+      window.onload=function(){
+     movement=window.rInterval(function(){
+
 if(jumpOrder == 1){
 if(jump == 0 && wait == 0){
 	jump = 1;
@@ -174,28 +181,16 @@ if(jump == 0 && wait == 0){
 }else if(jumpOrder == 0) {
 
 	jump = 0
-jumpTime = 0
-}},4)
+jumpTime = 0}
 
-setInterval(function(){
 if(jump == 1){
 py -= jumpH;
 jumpTime += 1;
 }
-},4)
-
-setInterval(function(){
 if(jumpTime >= jumpAllocation){
 	jump = 0;
 }
-},4)
 
-
-
-
-
-//movement 
-setInterval(function(){ //Movement of the player in the direction wanted 
 
 	if(direction == 1){ // going left
 			
@@ -204,46 +199,26 @@ px -= Pspeed
 px += Pspeed
 	
 }
-},4)
 
-
-
-
-
-//gravity
-setInterval(function(){
- 
 py += grav;
 
-},4)
- 
 
-
-//border
-setInterval(function(){ // world borders
 	if(px <  0){ //left border
 
 		px = 0;
 
   	}else if(px+pw > c.width){ //right border
-		px = c.width - pw;
+		px = c.width-pw;
 
 	}
 
-},4)
-
-
-setInterval(function(){
-	if(py <= 0){
-		py = 0
-	}
-},4)
-
-
-//restrict mid air jump
-setInterval(function(){
 wait = 1;
-},4)
+
+
+     },10);
+
+}
+
 
 
 //base platform
@@ -380,6 +355,8 @@ setInterval(function(){
    		} else if(level == 2){level = 3;  level3() }
    		else if(level == 1){level = 2;  level2() }
  }}},4)
+
+
 
 //level 2 
 function level2(){
@@ -710,19 +687,6 @@ platSpeed8 = 0.5/slowmo;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 //timer
 var time = 0
 setInterval(function(){
@@ -731,7 +695,8 @@ time += 1
 
 
 //draw function
-setInterval(function(){
+
+     draw=window.rInterval(function(){
 	c.width = c.width;
 ctx.strokeRect(base.x, base.y, base.w, base.h)
 ctx.fillRect(px,py,pw,ph)
@@ -753,40 +718,13 @@ ctx.fillStyle ='rgba(0,0,0,1)';
  ctx.font = "30px Arial";
 	ctx.fillText("Time:" + time + 's',610,1580);
 	ctx.fillText("level:" + level  ,510,1580);
-},10)
+},4)
 
 
-var test = 0
-var num = 0 
-var num1 = 0 
-var num2= 0 
+//Created by Lucas Marrie
+//a product of Firebals LTD
 
 
-      window.onload=function(){
-     movement=window.rInterval(function(){if(test == 0){
-     	num+= 1
-     	console.log(num)
-
-     }},10);
-
-     movement1=window.rInterval(function(){if(test == 0){
-     	num1+= 1
-     	console.log(num1)
-
-     }},10);
-          
-     movement2=window.rInterval(function(){if(test == 0){
-     	num2+= 1
-     	console.log(num2)
-
-     }},10);
-
-timeout1=window.rtimeOut(function(){
-test = 1 
-     },1000);
-
-
-    }
 
 
 
