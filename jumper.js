@@ -207,7 +207,7 @@ setInterval(function(){
 py += grav;
 
 },4)
-
+ 
 
 
 //border
@@ -745,14 +745,14 @@ var num = 0
 setInterval(function(){
 if(test == 0){
 console.log(num)
-num+=1
+num += 1
 setTimeout(function(){
-test  = 1 
+test = 1 
 },1000)
 
 }
 
-},1)
+},5)
 
 
 
