@@ -731,7 +731,7 @@ ctx.fillStyle ='rgba(0,0,0,1)';
  ctx.font = "30px Arial";
 	ctx.fillText("Time:" + time + 's',610,1580);
 	ctx.fillText("level:" + level  ,510,1580);
-},4)
+},10)
 
 	
 
@@ -752,7 +752,7 @@ test = 1
 
 }
 
-},25)
+},10)
 
 
 var test1 = 0 
@@ -768,7 +768,7 @@ test1 = 1
 
 }
 
-},25)
+},10)
 
 var test2 = 0 
 var num2 = 0
@@ -783,7 +783,7 @@ test2 = 1
 
 }
 
-},25)
+},10)
 
 
 var test3 = 0 
@@ -799,7 +799,7 @@ test3 = 1
 
 }
 
-},25)
+},10)
 
 
 
