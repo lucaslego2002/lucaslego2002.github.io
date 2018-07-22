@@ -22,9 +22,9 @@ var jumpTime = 0;
 var jumpOrder = 0;
 
 //movement scalars 
-var jumpH = 16;
-var Pspeed = 7;
-var grav = 6;
+var jumpH = 17.5;
+var Pspeed = 6;
+var grav = 8;
 var jumpAllocation = 22;
 
 //motion speed
