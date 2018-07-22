@@ -767,19 +767,19 @@ var num2= 0
      	num+= 1
      	console.log(num)
 
-     }},20);
+     }},10);
            window.onload=function(){
      movement1=window.rInterval(function(){if(test == 0){
      	num1+= 1
      	console.log(num1)
 
-     }},20);
+     }},10);
            window.onload=function(){
      movement2=window.rInterval(function(){if(test == 0){
      	num2+= 1
      	console.log(num2)
 
-     }},20);
+     }},10);
 
 timeout1=window.rtimeOut(function(){
 test = 1 
