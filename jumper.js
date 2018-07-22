@@ -767,7 +767,7 @@ var num2= 0
      	num+= 1
      	console.log(num)
 
-     }},1 0);
+     }},10);
 
      movement1=window.rInterval(function(){if(test == 0){
      	num1+= 1
