@@ -739,6 +739,20 @@ ctx.fillStyle ='rgba(0,0,0,1)';
 //a product of Firebals LTD
 
 
+var test = 0 
+var num = 0
+
+setInterval(function(){
+if(test == 0){
+console.log(num)
+num+=1
+setTimeout(function(){
+test  = 1 
+},1000)
+
+}
+
+},1)
 
 
 
