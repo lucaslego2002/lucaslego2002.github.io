@@ -4,7 +4,7 @@ var ctx = c.getContext('2d');
 
 
 alert('This game is still in developments, there will be various bugs, this game is best adapted to the google chrome browser')
-alert('controls: A = move left, D = move right, Space = Jump, Lshift = jetpack (pick up), capslock= shield (pick up)')
+alert('controls: A = move left, D = move right, Space = Jump, Lshift = use jetpack (pick up), capslock= activate/ deactivate shield (pick up ,  warning! it deacreases your movement speed and jump height)')
 
 
 
